@@ -35,7 +35,7 @@ public class MainActivity extends Activity {
 	
 	public void store(View view){
 		Intent intent = getIntent();
-		if (intent != null && getIntent().getData() != null)
+		if (intent.getExtras() != null)
 		{   
 			Bundle extras = intent.getExtras();
 			String firstname = extras.getString("EXTRA_FIRSTNAME");
