@@ -27,31 +27,33 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090010;
+        public static final int action_settings=0x7f090011;
         public static final int chooseprompt=0x7f090006;
         public static final int done=0x7f090008;
         public static final int editage=0x7f090005;
         public static final int editfilename=0x7f090001;
         public static final int editfname=0x7f090003;
         public static final int editlname=0x7f090004;
-        public static final int exitbtn=0x7f09000e;
+        public static final int exitbtn=0x7f09000f;
         public static final int f_spinner=0x7f090007;
-        public static final int filecontent=0x7f09000f;
+        public static final int filecontent=0x7f090010;
         public static final int finish=0x7f090002;
         public static final int linearLayout1=0x7f090000;
-        public static final int loadbtn=0x7f09000d;
+        public static final int loadbtn=0x7f09000e;
         public static final int namebtn=0x7f09000a;
-        public static final int storebtn=0x7f09000c;
+        public static final int storebtn=0x7f09000d;
         public static final int storeindatabase=0x7f090009;
         public static final int viewbtn=0x7f09000b;
+        public static final int viewdatabasebtn=0x7f09000c;
     }
     public static final class layout {
         public static final int activity_all_file=0x7f030000;
-        public static final int activity_enter_filename=0x7f030001;
-        public static final int activity_enter_name=0x7f030002;
-        public static final int activity_load=0x7f030003;
-        public static final int activity_main=0x7f030004;
-        public static final int activity_showfile=0x7f030005;
+        public static final int activity_database=0x7f030001;
+        public static final int activity_enter_filename=0x7f030002;
+        public static final int activity_enter_name=0x7f030003;
+        public static final int activity_load=0x7f030004;
+        public static final int activity_main=0x7f030005;
+        public static final int activity_showfile=0x7f030006;
     }
     public static final class menu {
         public static final int all_file=0x7f080000;
@@ -69,6 +71,7 @@ public final class R {
         public static final int Load=0x7f060005;
         public static final int Store=0x7f060004;
         public static final int View=0x7f060003;
+        public static final int Viewdatabase=0x7f060016;
         public static final int action_settings=0x7f060001;
         public static final int app_name=0x7f060000;
         public static final int finish=0x7f06000f;

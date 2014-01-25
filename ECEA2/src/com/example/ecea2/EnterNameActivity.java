@@ -54,6 +54,18 @@ public class EnterNameActivity extends Activity {
 	public void storeindatabase(View view)
 	{
 	  DatabaseHandler db = new DatabaseHandler(this);
+	  EditText editText1 = (EditText) findViewById(R.id.editfname);
+	  String firstname = editText1.getText().toString();
+	  EditText editText2 = (EditText) findViewById(R.id.editlname);
+	  String lastname = editText2.getText().toString();
+	  EditText editText3 = (EditText) findViewById(R.id.editage);
+	  Spinner myspinner = (Spinner) findViewById(R.id.f_spinner);
+	  String ffood = myspinner.getSelectedItem().toString();
+	  String age = editText3.getText().toString();
+	  db.addContact(new Contact(firstname+lastname, ffood));
+	  
+		
+	  
 	  
 	}
 

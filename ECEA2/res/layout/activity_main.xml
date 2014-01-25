@@ -21,6 +21,13 @@
         android:text="@string/View" 
         android:onClick="view"/>
     
+     <Button
+        android:id="@+id/viewdatabasebtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/Viewdatabase" 
+        android:onClick="viewdatabase"/>
     <Button
         android:id="@+id/storebtn"
         android:layout_width="match_parent"
