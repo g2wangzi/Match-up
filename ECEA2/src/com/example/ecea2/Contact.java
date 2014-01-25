@@ -13,9 +13,6 @@ public class Contact {
          
     } //vantic test test comment
     
-    public void test2() {
-
-    }
     // Sean test comment
     // constructor
     public Contact(int id, String name, String _age, String _food){
@@ -59,11 +56,6 @@ public class Contact {
     // setting Age
     public void setAge(String age){
         this._age = age;
-    }
-    
-    public void test1()
-    {
-     
     }
     
  // getting Food

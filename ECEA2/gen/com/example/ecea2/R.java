@@ -27,31 +27,32 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090018;
-        public static final int agefrom=0x7f09000c;
-        public static final int ageupto=0x7f09000e;
+        public static final int action_settings=0x7f090019;
+        public static final int agefrom=0x7f09000d;
+        public static final int ageupto=0x7f09000f;
         public static final int chooseprompt=0x7f090006;
         public static final int done=0x7f090008;
         public static final int editage=0x7f090005;
         public static final int editfilename=0x7f090001;
         public static final int editfname=0x7f090003;
         public static final int editlname=0x7f090004;
-        public static final int exitbtn=0x7f090016;
+        public static final int exitbtn=0x7f090017;
         public static final int f_spinner=0x7f090007;
-        public static final int filecontent=0x7f090017;
-        public static final int filterbtn=0x7f090014;
-        public static final int filterprompt1=0x7f09000a;
-        public static final int filterprompt2=0x7f09000b;
-        public static final int filterprompt3=0x7f09000d;
+        public static final int filecontent=0x7f090018;
+        public static final int filterbtn=0x7f090015;
+        public static final int filterprompt1=0x7f09000b;
+        public static final int filterprompt2=0x7f09000c;
+        public static final int filterprompt3=0x7f09000e;
         public static final int finish=0x7f090002;
         public static final int linearLayout1=0x7f090000;
-        public static final int loadbtn=0x7f090015;
-        public static final int namebtn=0x7f090010;
-        public static final int show=0x7f09000f;
-        public static final int storebtn=0x7f090013;
+        public static final int loadbtn=0x7f090016;
+        public static final int namebtn=0x7f090011;
+        public static final int photo=0x7f09000a;
+        public static final int show=0x7f090010;
+        public static final int storebtn=0x7f090014;
         public static final int storeindatabase=0x7f090009;
-        public static final int viewbtn=0x7f090011;
-        public static final int viewdatabasebtn=0x7f090012;
+        public static final int viewbtn=0x7f090012;
+        public static final int viewdatabasebtn=0x7f090013;
     }
     public static final class layout {
         public static final int activity_all_file=0x7f030000;
@@ -99,6 +100,7 @@ public final class R {
         public static final int hint_filename=0x7f06000e;
         public static final int hint_fname=0x7f060009;
         public static final int hint_lname=0x7f06000a;
+        public static final int photo=0x7f060020;
         public static final int storeindatabase=0x7f060014;
         public static final int title_activity_all_file=0x7f060013;
         public static final int title_activity_database=0x7f060015;
