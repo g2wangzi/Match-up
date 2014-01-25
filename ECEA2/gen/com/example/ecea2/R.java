@@ -47,12 +47,11 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_all_file=0x7f030000;
-        public static final int activity_database=0x7f030001;
-        public static final int activity_enter_filename=0x7f030002;
-        public static final int activity_enter_name=0x7f030003;
-        public static final int activity_load=0x7f030004;
-        public static final int activity_main=0x7f030005;
-        public static final int activity_showfile=0x7f030006;
+        public static final int activity_enter_filename=0x7f030001;
+        public static final int activity_enter_name=0x7f030002;
+        public static final int activity_load=0x7f030003;
+        public static final int activity_main=0x7f030004;
+        public static final int activity_showfile=0x7f030005;
     }
     public static final class menu {
         public static final int all_file=0x7f080000;
