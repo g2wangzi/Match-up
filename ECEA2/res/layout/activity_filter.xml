@@ -14,7 +14,7 @@
         android:text="@string/filter_prompt1" />
     
     <Spinner
-		android:id="@+id/f_spinner"
+		android:id="@+id/filter_spinner"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
 		android:drawSelectorOnTop="true"

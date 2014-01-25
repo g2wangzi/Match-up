@@ -7,26 +7,30 @@ import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.widget.ArrayAdapter;
 
-public class ShowFilterActivity extends ListActivity {
 
+
+public class ShowFilterActivity extends ListActivity {
+	String ffood = "Apple";
+/*
 	@Override
-	protected void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_show_filter);
+	protected void onCreate(Bundle icicle) {
+		super.onCreate(icicle);
 		DatabaseHandler db = new DatabaseHandler(this);
+		//String ffood = "Carrot";
+		//String agefrom = null;
+		//String ageupto = null;
+
+
 		Intent intent = getIntent();
-		String ffood =null;
-		String agefrom =null;
-		String ageupto =null;
+
 		if (intent.getExtras() != null)
 		{   
 			Bundle extras = intent.getExtras();
 			ffood = extras.getString("EXTRA_FFOOD");
-			agefrom = extras.getString("EXTRA_AGEFROM");
-			ageupto = extras.getString("EXTRA_AGEUPTO");
+			//agefrom = extras.getString("EXTRA_AGEFROM");
+			//ageupto = extras.getString("EXTRA_AGEUPTO");
 		}
 		else
 		{
@@ -36,10 +40,33 @@ public class ShowFilterActivity extends ListActivity {
 			.setPositiveButton("Back", null)
 			.show();
 		}
-	    
-		 List<Contact> contacts = db.getSelectedContacts(ffood, agefrom, ageupto); 
-		 ArrayList<String> values  = new ArrayList<String>();
 
+
+	    
+		 //List<Contact> contacts = db.getSelectedContacts(ffood, agefrom, ageupto);
+		List<Contact> contacts = db.getSelectedContacts(ffood);
+		ArrayList<String> values  = new ArrayList<String>();
+
+	    for (Contact cn : contacts) {
+	        String content = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Age: " + cn.getAge() + " ,Food: " + cn.getFood();
+	        values.add(content);
+	    
+	    
+	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+	        android.R.layout.simple_list_item_2, values);
+	    setListAdapter(adapter);
+	    }
+	    
+	}
+*/
+
+	public void onCreate(Bundle icicle) {
+	    super.onCreate(icicle);
+	    DatabaseHandler db = new DatabaseHandler(this);
+	    List<Contact> contacts = db.getSelectedContacts(ffood);
+	    ArrayList<String> values  = new ArrayList<String>();
+	    
+	    
 	    for (Contact cn : contacts) {
 	        String content = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Age: " + cn.getAge() + " ,Food: " + cn.getFood();
 	        values.add(content);
@@ -49,14 +76,8 @@ public class ShowFilterActivity extends ListActivity {
 	        android.R.layout.simple_list_item_1, values);
 	    setListAdapter(adapter);
 	    }
-	    
+
 	}
 
-	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.show_filter, menu);
-		return true;
-	}
 
 }

@@ -15,7 +15,7 @@ public class FilterActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_filter);
-		Spinner s = (Spinner)findViewById(R.id.f_spinner);
+		Spinner s = (Spinner)findViewById(R.id.filter_spinner);
 		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
 				this, R.array.food_spinner, android.R.layout.simple_spinner_dropdown_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
@@ -31,18 +31,20 @@ public class FilterActivity extends Activity {
 	
 	public void show(View view) {
 		Intent intent = new Intent(this, ShowFilterActivity.class);
+
 		Bundle extras = new Bundle();
-		Spinner myspinner = (Spinner) findViewById(R.id.f_spinner);
-		EditText editText1 = (EditText) findViewById(R.id.agefrom);
-		EditText editText2 = (EditText) findViewById(R.id.ageupto);
+		Spinner myspinner = (Spinner) findViewById(R.id.filter_spinner);
+		//EditText editText1 = (EditText) findViewById(R.id.agefrom);
+		//EditText editText2 = (EditText) findViewById(R.id.ageupto);
 		String ffood = myspinner.getSelectedItem().toString();
-		String agefrom = editText1.getText().toString();
-		String ageupto = editText2.getText().toString();
+		//String agefrom = editText1.getText().toString();
+		//String ageupto = editText2.getText().toString();
 		extras.putString("EXTRA_FFOOD",ffood);
-		extras.putString("EXTRA_AGEFROM",agefrom);
-		extras.putString("EXTRA_AGEUPTO",ageupto);
+		//extras.putString("EXTRA_AGEFROM",agefrom);
+		//extras.putString("EXTRA_AGEUPTO",ageupto);
 		intent.putExtras(extras);
 		startActivity(intent);
+
 	}
 
 }
