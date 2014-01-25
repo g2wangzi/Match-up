@@ -26,5 +26,12 @@
     <string name="Viewdatabase">viewdatabase</string>
     <string name="title_activity_filter">FilterActivity</string>
     <string name="Filter">Filter</string>
+    <string name="filter_prompt1">Choose fruit:</string>
+    <string name="filter_prompt2">Choose age from:</string>
+    <string name="filter_prompt3">Choose age up to:</string>
+    <string name="age_from">from</string>
+    <string name="age_to">to</string>
+    <string name="Show">Show</string>
+    <string name="title_activity_show_filter">ShowFilterActivity</string>
 
 </resources>
