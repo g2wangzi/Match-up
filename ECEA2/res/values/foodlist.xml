@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="food_spinner">
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Carrot</item>
+        <item>Orange</item>
+        <item>Dfruit</item>
+        <item>Efruit</item>
+        <item>Ffruit</item>
+        <item>dadada</item>
+        <item>dadada1</item>
+        <item>132131</item>
+        <item>qq5</item>
+        <item>mjlkmlm31</item>
+    </string-array>
+</resources>

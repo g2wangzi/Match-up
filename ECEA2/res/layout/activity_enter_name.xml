@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".EnterNameActivity"
+    android:orientation="vertical" >
+
+    <EditText
+        android:id="@+id/editfname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_fname" >
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editlname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_lname" />
+        
+    <EditText
+        android:id="@+id/editage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_age" />
+    
+    <TextView
+        android:id="@+id/chooseprompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:textSize="23sp"
+        android:text="@string/food_prompt" />
+
+	<Spinner
+		android:id="@+id/f_spinner"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:drawSelectorOnTop="true"
+		android:prompt="@string/food_prompt" />
+
+    <Button
+      	android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/Done"
+        android:onClick="done" />
+
+</LinearLayout>

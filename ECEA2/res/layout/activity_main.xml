@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <Button
+        android:id="@+id/namebtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/EnterNames"
+        android:onClick="toname" />
+    
+    <Button
+        android:id="@+id/viewbtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/View" 
+        android:onClick="view"/>
+    
+    <Button
+        android:id="@+id/storebtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/Store" 
+        android:onClick="store"/>
+    
+    <Button
+        android:id="@+id/loadbtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/Load"
+        android:onClick="load" />
+    
+    <Button
+        android:id="@+id/exitbtn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text="@string/Exit"
+        android:onClick="exitapp" />
+
+</LinearLayout>
