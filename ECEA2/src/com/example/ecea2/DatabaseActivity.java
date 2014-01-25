@@ -16,7 +16,7 @@ public class DatabaseActivity extends ListActivity {
     
     
     for (Contact cn : contacts) {
-        String content = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Phone: " + cn.getPhoneNumber();
+        String content = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Age: " + cn.getAge() + " ,Food: " + cn.getFood();
         values.add(content);
     
     

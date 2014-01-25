@@ -62,7 +62,7 @@ public class EnterNameActivity extends Activity {
 	  Spinner myspinner = (Spinner) findViewById(R.id.f_spinner);
 	  String ffood = myspinner.getSelectedItem().toString();
 	  String age = editText3.getText().toString();
-	  db.addContact(new Contact(firstname+lastname, ffood));
+	  db.addContact(new Contact(firstname+lastname, age, ffood));
 	  
 		
 	  

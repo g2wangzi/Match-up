@@ -5,51 +5,64 @@ public class Contact {
     //private variables
     int _id;
     String _name;
-    String _phone_number;
+    String _age;
+    String _food;
      
     // Empty constructor
     public Contact(){
          
     }
     // constructor
-    public Contact(int id, String name, String _phone_number){
+    public Contact(int id, String name, String _age, String _food){
         this._id = id;
         this._name = name;
-        this._phone_number = _phone_number;
+        this._age = _age;
+        this._food = _food;
     }
      
     // constructor
-    public Contact(String name, String _phone_number){
+    public Contact(String name, String _age, String _food){
         this._name = name;
-        this._phone_number = _phone_number;
+        this._age = _age;
+        this._food = _food;
     }
     // getting ID
     public int getID(){
         return this._id;
     }
      
-    // setting id
+    // setting ID
     public void setID(int id){
         this._id = id;
     }
      
-    // getting name
+    // getting Name
     public String getName(){
         return this._name;
     }
      
-    // setting name
+    // setting Name
     public void setName(String name){
         this._name = name;
     }
      
-    // getting phone number
-    public String getPhoneNumber(){
-        return this._phone_number;
+    // getting Age
+    public String getAge(){
+        return this._age;
     }
      
-    // setting phone number
-    public void setPhoneNumber(String phone_number){
-        this._phone_number = phone_number;
+    // setting Age
+    public void setAge(String age){
+        this._age = age;
+    }
+    
+ // getting Food
+    public String getFood(){
+        return this._food;
+    }
+     
+    // setting Age
+    public void setFood(String food){
+        this._food = food;
     }
 }
