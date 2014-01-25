@@ -11,7 +11,11 @@ public class Contact {
     // Empty constructor
     public Contact(){
          
-    } //vantic test comment
+    } //vantic test test comment
+    
+    public void test2() {
+
+    }
     // Sean test comment
     // constructor
     public Contact(int id, String name, String _age, String _food){
