@@ -57,6 +57,11 @@ public class Contact {
         this._age = age;
     }
     
+    public void test1()
+    {
+     
+    }
+    
  // getting Food
     public String getFood(){
         return this._food;
