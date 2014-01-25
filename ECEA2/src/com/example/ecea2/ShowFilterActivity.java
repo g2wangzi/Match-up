@@ -3,6 +3,7 @@ package com.example.ecea2;
 import java.util.ArrayList;
 import java.util.List;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,11 +17,29 @@ public class ShowFilterActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_show_filter);
 		DatabaseHandler db = new DatabaseHandler(this);
-	    List<Contact> contacts = db.getAllContacts(); 
-	    ArrayList<String> values  = new ArrayList<String>();
-	    Intent intent = getIntent();
+		Intent intent = getIntent();
+		String ffood =null;
+		String agefrom =null;
+		String ageupto =null;
+		if (intent.getExtras() != null)
+		{   
+			Bundle extras = intent.getExtras();
+			ffood = extras.getString("EXTRA_FFOOD");
+			agefrom = extras.getString("EXTRA_AGEFROM");
+			ageupto = extras.getString("EXTRA_AGEUPTO");
+		}
+		else
+		{
+			new AlertDialog.Builder(this)
+			.setTitle("Sorry")
+			.setMessage("You need to EnterNames first then store")
+			.setPositiveButton("Back", null)
+			.show();
+		}
 	    
-	    
+		 List<Contact> contacts = db.getSelectedContacts(ffood, agefrom, ageupto); 
+		 ArrayList<String> values  = new ArrayList<String>();
+
 	    for (Contact cn : contacts) {
 	        String content = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Age: " + cn.getAge() + " ,Food: " + cn.getFood();
 	        values.add(content);
