@@ -46,6 +46,10 @@
             android:name="com.example.ecea2.AllFileActivity"
             android:label="@string/title_activity_all_file" >
         </activity>
+        <activity
+            android:name="com.example.ecea2.DatabaseActivity"
+            android:label="@string/title_activity_database" >
+        </activity>
     </application>
 
 </manifest>

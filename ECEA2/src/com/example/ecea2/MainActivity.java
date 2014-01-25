@@ -2,6 +2,7 @@ package com.example.ecea2;
 
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -34,19 +35,30 @@ public class MainActivity extends Activity {
 	
 	public void store(View view){
 		Intent intent = getIntent();
-		Bundle extras = intent.getExtras();
-		String firstname = extras.getString("EXTRA_FIRSTNAME");
-		String lastname = extras.getString("EXTRA_LASTNAME");
-		String age = extras.getString("EXTRA_AGE");
-		String ffood = extras.getString("EXTRA_FFOOD");
-		Intent intent2 = new Intent(this, EnterFilenameActivity.class);
-		Bundle extras2 = new Bundle();
-		extras2.putString("EXTRA_FIRSTNAME",firstname);
-		extras2.putString("EXTRA_LASTNAME",lastname);
-		extras2.putString("EXTRA_AGE",age);
-		extras2.putString("EXTRA_FFOOD",ffood);
-		intent2.putExtras(extras2);
-        startActivity(intent2);
+		if (intent != null && getIntent().getData() != null)
+		{   
+			Bundle extras = intent.getExtras();
+			String firstname = extras.getString("EXTRA_FIRSTNAME");
+			String lastname = extras.getString("EXTRA_LASTNAME");
+			String age = extras.getString("EXTRA_AGE");
+			String ffood = extras.getString("EXTRA_FFOOD");
+			Intent intent2 = new Intent(this, EnterFilenameActivity.class);
+			Bundle extras2 = new Bundle();
+			extras2.putString("EXTRA_FIRSTNAME",firstname);
+			extras2.putString("EXTRA_LASTNAME",lastname);
+			extras2.putString("EXTRA_AGE",age);
+			extras2.putString("EXTRA_FFOOD",ffood);
+			intent2.putExtras(extras2);
+	        startActivity(intent2);
+		}
+		else
+		{
+			new AlertDialog.Builder(this)
+			.setTitle("Sorry")
+			.setMessage("You need to EnterNames first then store")
+			.setPositiveButton("Back", null)
+			.show();
+		}
 	}
 	
 	public void load(View view) {
