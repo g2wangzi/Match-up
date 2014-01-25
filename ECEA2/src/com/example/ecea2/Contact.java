@@ -12,6 +12,7 @@ public class Contact {
     public Contact(){
          
     } //vantic test comment
+    // Sean test comment
     // constructor
     public Contact(int id, String name, String _age, String _food){
         this._id = id;
