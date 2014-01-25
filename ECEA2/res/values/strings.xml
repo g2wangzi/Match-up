@@ -24,5 +24,7 @@
     <string name="storeindatabase">storeindatabase</string>
     <string name="title_activity_database">DatabaseActivity</string>
     <string name="Viewdatabase">viewdatabase</string>
+    <string name="title_activity_filter">FilterActivity</string>
+    <string name="Filter">Filter</string>
 
 </resources>

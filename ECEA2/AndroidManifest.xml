@@ -50,6 +50,10 @@
             android:name="com.example.ecea2.DatabaseActivity"
             android:label="@string/title_activity_database" >
         </activity>
+        <activity
+            android:name="com.example.ecea2.FilterActivity"
+            android:label="@string/title_activity_filter" >
+        </activity>
     </application>
 
 </manifest>
