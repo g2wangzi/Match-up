@@ -43,7 +43,7 @@ public class ShowFilterActivity extends ListActivity {
 
 
 	    
-		 //List<Contact> contacts = db.getSelectedContacts(ffood, agefrom, ageupto);
+		//List<Contact> contacts = db.getSelectedContacts(ffood, agefrom, ageupto);
 		List<Contact> contacts = db.getSelectedContacts(ffood);
 		ArrayList<String> values  = new ArrayList<String>();
 
@@ -64,12 +64,16 @@ public class ShowFilterActivity extends ListActivity {
 	    super.onCreate(icicle);
 	    DatabaseHandler db = new DatabaseHandler(this);
 	    String ffood = null;
+	    String agefrom = null;
+	    String ageupto = null;
 	    
 	    Intent intent = getIntent();
 	    if (intent.getExtras() != null)
 		{
 	    	Bundle extras = intent.getExtras();
-	    	ffood = extras.getString("EXTRA_FFOOD");		
+	    	ffood = extras.getString("EXTRA_FFOOD");
+	    	agefrom = extras.getString("EXTRA_AGEFROM");
+			ageupto = extras.getString("EXTRA_AGEUPTO");
 		} else {
 			new AlertDialog.Builder(this)
 			.setTitle("Sorry")
@@ -78,7 +82,8 @@ public class ShowFilterActivity extends ListActivity {
 			.show();
 		}
 	    
-	    List<Contact> contacts = db.getSelectedContacts(ffood);
+	    List<Contact> contacts = db.getSelectedContacts(ffood, agefrom, ageupto);
+	    //List<Contact> contacts = db.getSelectedContacts(ffood);
 	    ArrayList<String> values  = new ArrayList<String>();
 	    
 	    for (Contact cn : contacts) {

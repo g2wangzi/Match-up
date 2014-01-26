@@ -146,14 +146,14 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
     
  // Getting Selected Contacts
-    //public List<Contact> getSelectedContacts(String food, String agefrom, String ageto) {
-    public List<Contact> getSelectedContacts(String food) {
+    public List<Contact> getSelectedContacts(String food, String agefrom, String ageupto) {
+    //public List<Contact> getSelectedContacts(String food) {
         List<Contact> contactList = new ArrayList<Contact>();
-        //String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS + "WHERE KEY_AGE > ? AND KEY_AGE < ? AND KEY_FOOD = ?" ;
-        String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS + " WHERE " + KEY_FOOD + " =?" ;
+        String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS + " WHERE " + KEY_AGE + ">? AND " + KEY_AGE + "<? AND " + KEY_FOOD + "=?";
+        //String selectQuery = "SELECT  * FROM " + TABLE_CONTACTS + " WHERE " + KEY_FOOD + " =?" ;
         SQLiteDatabase db = this.getWritableDatabase();
-        //Cursor cursor = db.rawQuery(selectQuery, new String[] {agefrom, ageto, food});
-        Cursor cursor = db.rawQuery(selectQuery, new String[] {food});
+        Cursor cursor = db.rawQuery(selectQuery, new String[] {agefrom, ageupto, food});
+        //Cursor cursor = db.rawQuery(selectQuery, new String[] {food});
         
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {

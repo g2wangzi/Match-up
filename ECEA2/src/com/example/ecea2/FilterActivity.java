@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.Spinner;
 
 public class FilterActivity extends Activity {
@@ -32,14 +33,14 @@ public class FilterActivity extends Activity {
 		Intent intent = new Intent(this, ShowFilterActivity.class);
 		Bundle extras = new Bundle();
 		Spinner myspinner = (Spinner) findViewById(R.id.filter_spinner);
-		//EditText editText1 = (EditText) findViewById(R.id.agefrom);
-		//EditText editText2 = (EditText) findViewById(R.id.ageupto);
+		EditText editText1 = (EditText) findViewById(R.id.agefrom);
+		EditText editText2 = (EditText) findViewById(R.id.ageupto);
 		String ffood = myspinner.getSelectedItem().toString();
-		//String agefrom = editText1.getText().toString();
-		//String ageupto = editText2.getText().toString();
+		String agefrom = editText1.getText().toString();
+		String ageupto = editText2.getText().toString();
 		extras.putString("EXTRA_FFOOD",ffood);
-		//extras.putString("EXTRA_AGEFROM",agefrom);
-		//extras.putString("EXTRA_AGEUPTO",ageupto);
+		extras.putString("EXTRA_AGEFROM",agefrom);
+		extras.putString("EXTRA_AGEUPTO",ageupto);
 		intent.putExtras(extras);
 		startActivity(intent);
 
