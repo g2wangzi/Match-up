@@ -12,7 +12,7 @@ import android.widget.ArrayAdapter;
 
 
 public class ShowFilterActivity extends ListActivity {
-	String ffood = "Apple";
+	// String ffood = "Apple";
 /*
 	@Override
 	protected void onCreate(Bundle icicle) {
@@ -59,22 +59,35 @@ public class ShowFilterActivity extends ListActivity {
 	    
 	}
 */
-
-	public void onCreate(Bundle icicle) {
+	@Override
+	protected void onCreate(Bundle icicle) {
 	    super.onCreate(icicle);
 	    DatabaseHandler db = new DatabaseHandler(this);
+	    String ffood = null;
+	    
+	    Intent intent = getIntent();
+	    if (intent.getExtras() != null)
+		{
+	    	Bundle extras = intent.getExtras();
+	    	ffood = extras.getString("EXTRA_FFOOD");		
+		} else {
+			new AlertDialog.Builder(this)
+			.setTitle("Sorry")
+			.setMessage("Error showing contacts.")
+			.setPositiveButton("Back", null)
+			.show();
+		}
+	    
 	    List<Contact> contacts = db.getSelectedContacts(ffood);
 	    ArrayList<String> values  = new ArrayList<String>();
-	    
 	    
 	    for (Contact cn : contacts) {
 	        String content = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Age: " + cn.getAge() + " ,Food: " + cn.getFood();
 	        values.add(content);
 	    
-	    
-	    ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-	        android.R.layout.simple_list_item_1, values);
-	    setListAdapter(adapter);
+	        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+	        		android.R.layout.simple_list_item_1, values);
+	        setListAdapter(adapter);
 	    }
 
 	}

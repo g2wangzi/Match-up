@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
-import android.widget.EditText;
 import android.widget.Spinner;
 
 public class FilterActivity extends Activity {
@@ -31,7 +30,6 @@ public class FilterActivity extends Activity {
 	
 	public void show(View view) {
 		Intent intent = new Intent(this, ShowFilterActivity.class);
-
 		Bundle extras = new Bundle();
 		Spinner myspinner = (Spinner) findViewById(R.id.filter_spinner);
 		//EditText editText1 = (EditText) findViewById(R.id.agefrom);

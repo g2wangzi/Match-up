@@ -167,7 +167,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 contactList.add(contact);
             } while (cursor.moveToNext());
         }
- 
+        db.close();
         // return contact list
         return contactList;
     }
