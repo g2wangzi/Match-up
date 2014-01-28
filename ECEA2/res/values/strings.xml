@@ -34,6 +34,7 @@
     <string name="Show">Show</string>
     <string name="title_activity_show_filter">ShowFilterActivity</string>
     <string name="photo">take a picture</string>
+    <string name="profileimg">img for profile</string>
 
 
 </resources>

@@ -149,7 +149,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         return cursor.getCount();
     }
     
- // Getting Selected Contacts
+    // Getting Selected Contacts
     public List<Contact> getSelectedContacts(String food, String agefrom, String ageupto) {
     //public List<Contact> getSelectedContacts(String food) {
         List<Contact> contactList = new ArrayList<Contact>();
@@ -175,6 +175,13 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         db.close();
         // return contact list
         return contactList;
+    }
+    
+    public String getPicurlByID(String id) {
+    	String selectQuery = "SELECT " + KEY_PICURL + " FROM " + TABLE_CONTACTS + " WHERE " + KEY_ID + " = ?";
+    	SQLiteDatabase db = this.getWritableDatabase();
+    	Cursor cursor = db.rawQuery(selectQuery, new String[] {id});
+    	return cursor.getString(0);
     }
  
 }

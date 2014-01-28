@@ -102,6 +102,7 @@ public final class R {
         public static final int hint_fname=0x7f060009;
         public static final int hint_lname=0x7f06000a;
         public static final int photo=0x7f060020;
+        public static final int profileimg=0x7f060021;
         public static final int storeindatabase=0x7f060014;
         public static final int title_activity_all_file=0x7f060013;
         public static final int title_activity_database=0x7f060015;
