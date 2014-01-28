@@ -7,6 +7,7 @@ public class Contact {
     String _name;
     String _age;
     String _food;
+    String _picurl;
      
     // Empty constructor
     public Contact(){
@@ -15,18 +16,20 @@ public class Contact {
     
     // Sean test comment
     // constructor
-    public Contact(int id, String name, String _age, String _food){
+    public Contact(int id, String name, String _age, String _food, String _picurl){
         this._id = id;
         this._name = name;
         this._age = _age;
         this._food = _food;
+        this._picurl = _picurl;
     }
      
     // constructor
-    public Contact(String name, String _age, String _food){
+    public Contact(String name, String _age, String _food, String _picurl){
         this._name = name;
         this._age = _age;
         this._food = _food;
+        this._picurl = _picurl;
     }
     // getting ID
     public int getID(){
@@ -58,13 +61,23 @@ public class Contact {
         this._age = age;
     }
     
- // getting Food
+    // getting Food
     public String getFood(){
         return this._food;
     }
      
-    // setting Age
+    // setting Food
     public void setFood(String food){
         this._food = food;
+    }
+    
+    // getting Picurl
+    public String getPicurl(){
+        return this._picurl;
+    }
+     
+    // setting Picurl
+    public void setPicurl(String picurl){
+        this._picurl = picurl;
     }
 }

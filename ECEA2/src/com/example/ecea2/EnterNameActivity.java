@@ -20,7 +20,7 @@ import android.widget.Spinner;
 import android.widget.Toast;
 
 public class EnterNameActivity extends Activity {
-	
+	public String picurl = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -56,6 +56,7 @@ public class EnterNameActivity extends Activity {
 		extras.putString("EXTRA_LASTNAME",lastname);
 		extras.putString("EXTRA_AGE",age);
 		extras.putString("EXTRA_FFOOD",ffood);
+		extras.putString("EXTRA_PICURL", picurl);
 		intent.putExtras(extras);
 		startActivity(intent);	
 	}
@@ -71,7 +72,8 @@ public class EnterNameActivity extends Activity {
 	  Spinner myspinner = (Spinner) findViewById(R.id.f_spinner);
 	  String ffood = myspinner.getSelectedItem().toString();
 	  String age = editText3.getText().toString();
-	  db.addContact(new Contact(firstname+lastname, age, ffood));
+	  Log.d("stringtag", picurl);
+	  db.addContact(new Contact(firstname+" "+lastname, age, ffood, picurl));
 	  
 
 	}
@@ -122,11 +124,8 @@ public class EnterNameActivity extends Activity {
 	    if (type == MEDIA_TYPE_IMAGE){
 	        mediaFile = new File(mediaStorageDir.getPath() + File.separator +
 	        "IMG_"+ timeStamp + ".jpg");
-	        
-	        // test 
-	        DatabaseHandler db = new DatabaseHandler(this);
-	        db.addContact(new Contact("test1", "test1", (mediaStorageDir.getPath() + File.separator +
-	    	        "IMG_"+ timeStamp + ".jpg")));
+	        picurl = mediaStorageDir.getPath() + File.separator +
+	    	        "IMG_"+ timeStamp + ".jpg";
 	        
 	    } else {
 	        return null;

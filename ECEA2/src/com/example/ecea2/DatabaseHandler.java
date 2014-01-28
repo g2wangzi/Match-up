@@ -26,6 +26,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_NAME = "name";
     private static final String KEY_AGE = "age";
     private static final String KEY_FOOD = "food";
+    private static final String KEY_PICURL = "picurl";
     
  
     public DatabaseHandler(Context context) {
@@ -37,7 +38,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_CONTACTS + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
-                + KEY_AGE + " INTEGER," + KEY_FOOD + " TEXT" + ")";
+                + KEY_AGE + " INTEGER," + KEY_FOOD + " TEXT," + KEY_PICURL + " TEXT" + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
     }
  
@@ -63,6 +64,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_NAME, contact.getName()); // Contact Name
         values.put(KEY_AGE, contact.getAge()); // Contact Age
         values.put(KEY_FOOD, contact.getFood()); // Contact Food
+        values.put(KEY_PICURL, contact.getPicurl()); // Contact Picurl
  
         // Inserting Row
         db.insert(TABLE_CONTACTS, null, values);
@@ -80,7 +82,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             cursor.moveToFirst();
  
         Contact contact = new Contact(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2), cursor.getString(3));
+                cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
         // return contact
         return contact;
     }
@@ -102,6 +104,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 contact.setName(cursor.getString(1));
                 contact.setAge(cursor.getString(2));
                 contact.setFood(cursor.getString(3));
+                contact.setPicurl(cursor.getString(4));
                 // Adding contact to list
                 contactList.add(contact);
             } while (cursor.moveToNext());
@@ -119,6 +122,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_NAME, contact.getName());
         values.put(KEY_AGE, contact.getAge());
         values.put(KEY_FOOD, contact.getFood());
+        values.put(KEY_PICURL, contact.getPicurl());
  
         // updating row
         return db.update(TABLE_CONTACTS, values, KEY_ID + " = ?",
@@ -163,6 +167,7 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 contact.setName(cursor.getString(1));
                 contact.setAge(cursor.getString(2));
                 contact.setFood(cursor.getString(3));
+                contact.setPicurl(cursor.getString(4));
                 // Adding contact to list
                 contactList.add(contact);
             } while (cursor.moveToNext());

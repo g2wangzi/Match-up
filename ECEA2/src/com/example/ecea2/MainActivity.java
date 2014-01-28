@@ -42,12 +42,14 @@ public class MainActivity extends Activity {
 			String lastname = extras.getString("EXTRA_LASTNAME");
 			String age = extras.getString("EXTRA_AGE");
 			String ffood = extras.getString("EXTRA_FFOOD");
+			String picurl = extras.getString("EXTRA_PICURL");
 			Intent intent2 = new Intent(this, EnterFilenameActivity.class);
 			Bundle extras2 = new Bundle();
 			extras2.putString("EXTRA_FIRSTNAME",firstname);
 			extras2.putString("EXTRA_LASTNAME",lastname);
 			extras2.putString("EXTRA_AGE",age);
 			extras2.putString("EXTRA_FFOOD",ffood);
+			extras2.putString("EXTRA_PICURL",picurl);
 			intent2.putExtras(extras2);
 	        startActivity(intent2);
 		}

@@ -87,7 +87,8 @@ public class ShowFilterActivity extends ListActivity {
 	    ArrayList<String> values  = new ArrayList<String>();
 	    
 	    for (Contact cn : contacts) {
-	        String content = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Age: " + cn.getAge() + " ,Food: " + cn.getFood();
+	        String content = "Id: "+cn.getID()+" ,Name: " + cn.getName() + " ,Age: " + cn.getAge() + " ,Food: " + cn.getFood()
+	        		+ " ,Picurl: " + cn.getPicurl();
 	        values.add(content);
 	    
 	        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
