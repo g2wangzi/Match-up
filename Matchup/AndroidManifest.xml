@@ -18,7 +18,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.ecea2.MainActivity"
+            android:name="com.example.matchup.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -27,39 +27,39 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.ecea2.EnterNameActivity"
+            android:name="com.example.matchup.EnterNameActivity"
             android:label="@string/title_activity_enter_name" >
         </activity>
         <activity
-            android:name="com.example.ecea2.EnterFilenameActivity"
+            android:name="com.example.matchup.EnterFilenameActivity"
             android:label="@string/title_activity_enter_filename"
-            android:parentActivityName="com.example.ecea2.MainActivity" >
+            android:parentActivityName="com.example.matchup.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.ecea2.MainActivity" />
         </activity>
         <activity
-            android:name="com.example.ecea2.LoadActivity"
+            android:name="com.example.matchup.LoadActivity"
             android:label="@string/title_activity_load" >
         </activity>
         <activity
-            android:name="com.example.ecea2.ShowfileActivity"
+            android:name="com.example.matchup.ShowfileActivity"
             android:label="@string/title_activity_showfile" >
         </activity>
         <activity
-            android:name="com.example.ecea2.AllFileActivity"
+            android:name="com.example.matchup.AllFileActivity"
             android:label="@string/title_activity_all_file" >
         </activity>
         <activity
-            android:name="com.example.ecea2.DatabaseActivity"
+            android:name="com.example.matchup.DatabaseActivity"
             android:label="@string/title_activity_database" >
         </activity>
         <activity
-            android:name="com.example.ecea2.FilterActivity"
+            android:name="com.example.matchup.FilterActivity"
             android:label="@string/title_activity_filter" >
         </activity>
         <activity
-            android:name="com.example.ecea2.ShowFilterActivity"
+            android:name="com.example.matchup.ShowFilterActivity"
             android:label="@string/title_activity_show_filter" >
         </activity>
     </application>
