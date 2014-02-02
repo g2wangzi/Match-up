@@ -178,9 +178,12 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     }
     
     public String getPicurlByID(String id) {
-    	String selectQuery = "SELECT " + KEY_PICURL + " FROM " + TABLE_CONTACTS + " WHERE " + KEY_ID + " = ?";
-    	SQLiteDatabase db = this.getWritableDatabase();
-    	Cursor cursor = db.rawQuery(selectQuery, new String[] {id});
+    	String selectQuery = "SELECT "+ KEY_PICURL + " FROM " + TABLE_CONTACTS + " WHERE " + KEY_ID + "=?";
+    	SQLiteDatabase db2 = this.getWritableDatabase();
+    	Cursor cursor = db2.rawQuery(selectQuery, new String[] {id});
+    	//Contact contact = new Contact();
+    	
+    	cursor.moveToFirst();
     	return cursor.getString(0);
     }
  

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.app.ListActivity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -35,13 +36,19 @@ public class DatabaseActivity extends ListActivity {
   @Override
   protected void onListItemClick(ListView l, View v, int position, long id) {
     //String item = position;
-	  int position1 = position + 1;
-    Toast.makeText(this, position1 + " selected", Toast.LENGTH_LONG).show();
-    //Intent intent = new Intent(this, ShowfileActivity.class);
-    //Bundle extras = new Bundle();
-	//extras.putString("EXTRA_FILENAME",item);
-	//intent.putExtras(extras);
-	//startActivity(intent);
+	int peopleid = position + 1;
+	DatabaseHandler db1 = new DatabaseHandler(this);
+    String url = db1.getPicurlByID(Integer.toString(peopleid));
+    //Log.d("url",url);
+	//Toast.makeText(this, url + " selected", Toast.LENGTH_LONG).show();
+    //Toast.makeText(this, url + " selected", Toast.LENGTH_LONG).show();
+    
+    
+    Intent intent = new Intent(this, ShowPictureActivity.class);
+    Bundle extras = new Bundle();
+	extras.putString("EXTRA_URL",url);
+	intent.putExtras(extras);
+	startActivity(intent);
   }
   
 }

@@ -35,6 +35,6 @@
     <string name="title_activity_show_filter">ShowFilterActivity</string>
     <string name="photo">take a picture</string>
     <string name="profileimg">img for profile</string>
-
+    <string name="title_activity_show_picture">ShowPictureActivity</string>
 
 </resources>

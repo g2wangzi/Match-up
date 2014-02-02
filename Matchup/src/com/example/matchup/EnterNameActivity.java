@@ -91,7 +91,10 @@ public class EnterNameActivity extends Activity {
 	    intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri); // set the image file name
 
 	    // start the image capture Intent
+	    if(intent.resolveActivity(getPackageManager()) != null)
+	    {
 	    startActivityForResult(intent, CAPTURE_IMAGE_ACTIVITY_REQUEST_CODE);	
+	}
 	}
 	
 	public static final int MEDIA_TYPE_IMAGE = 1;
