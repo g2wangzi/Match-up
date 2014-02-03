@@ -18,6 +18,8 @@
     <string name="hint_filename">please enter a filename</string>
     <string name="finish">finish</string>
     <string name="food_prompt">Choose your favourite food</string>
+    <string name="rate_prompt">Rate the following movies</string>
+    <string name="movie_prompt">Rate this movie</string>
     <string name="title_activity_load">LoadActivity</string>
     <string name="title_activity_showfile">ShowfileActivity</string>
     <string name="title_activity_all_file">AllFileActivity</string>

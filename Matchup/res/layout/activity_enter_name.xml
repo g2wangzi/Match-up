@@ -1,5 +1,9 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".EnterNameActivity"
@@ -30,7 +34,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dip"
-        android:textSize="23sp"
+        android:textSize="18sp"
         android:text="@string/food_prompt" />
 
 	<Spinner
@@ -39,6 +43,49 @@
 		android:layout_height="wrap_content"
 		android:drawSelectorOnTop="true"
 		android:prompt="@string/food_prompt" />
+	
+	<TextView
+        android:id="@+id/rateprompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dip"
+        android:textSize="18sp"
+        android:text="@string/rate_prompt" />
+	
+	<Spinner
+		android:id="@+id/mov1_spinner"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:drawSelectorOnTop="true"
+		android:prompt="@string/movie_prompt" />
+	
+	<Spinner
+		android:id="@+id/mov2_spinner"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:drawSelectorOnTop="true"
+		android:prompt="@string/movie_prompt" />
+	
+	<Spinner
+		android:id="@+id/mov3_spinner"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:drawSelectorOnTop="true"
+		android:prompt="@string/movie_prompt" />
+	
+	<Spinner
+		android:id="@+id/mov4_spinner"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:drawSelectorOnTop="true"
+		android:prompt="@string/movie_prompt" />
+	
+	<Spinner
+		android:id="@+id/mov5_spinner"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:drawSelectorOnTop="true"
+		android:prompt="@string/movie_prompt" />
 
     <Button
       	android:id="@+id/done"
@@ -62,3 +109,4 @@
         android:onClick="photo" />
 
 </LinearLayout>
+</ScrollView>

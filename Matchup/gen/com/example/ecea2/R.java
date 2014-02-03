@@ -10,6 +10,7 @@ package com.example.ecea2;
 public final class R {
     public static final class array {
         public static final int food_spinner=0x7f050000;
+        public static final int rate_spinner=0x7f050001;
     }
     public static final class attr {
     }
@@ -27,36 +28,42 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f09001d;
-        public static final int agefrom=0x7f09000e;
-        public static final int ageupto=0x7f090010;
-        public static final int button1=0x7f09001b;
+        public static final int action_settings=0x7f090023;
+        public static final int agefrom=0x7f090014;
+        public static final int ageupto=0x7f090016;
+        public static final int button1=0x7f090021;
         public static final int chooseprompt=0x7f090006;
-        public static final int done=0x7f090008;
+        public static final int done=0x7f09000e;
         public static final int editage=0x7f090005;
         public static final int editfilename=0x7f090001;
         public static final int editfname=0x7f090003;
         public static final int editlname=0x7f090004;
-        public static final int exitbtn=0x7f090018;
+        public static final int exitbtn=0x7f09001e;
         public static final int f_spinner=0x7f090007;
-        public static final int filecontent=0x7f09001c;
-        public static final int filter_spinner=0x7f09000c;
-        public static final int filterbtn=0x7f090016;
-        public static final int filterprompt1=0x7f09000b;
-        public static final int filterprompt2=0x7f09000d;
-        public static final int filterprompt3=0x7f09000f;
+        public static final int filecontent=0x7f090022;
+        public static final int filter_spinner=0x7f090012;
+        public static final int filterbtn=0x7f09001c;
+        public static final int filterprompt1=0x7f090011;
+        public static final int filterprompt2=0x7f090013;
+        public static final int filterprompt3=0x7f090015;
         public static final int finish=0x7f090002;
-        public static final int imageView1=0x7f09001a;
+        public static final int imageView1=0x7f090020;
         public static final int linearLayout1=0x7f090000;
-        public static final int loadbtn=0x7f090017;
-        public static final int namebtn=0x7f090012;
-        public static final int photo=0x7f09000a;
-        public static final int relativelayout01=0x7f090019;
-        public static final int show=0x7f090011;
-        public static final int storebtn=0x7f090015;
-        public static final int storeindatabase=0x7f090009;
-        public static final int viewbtn=0x7f090013;
-        public static final int viewdatabasebtn=0x7f090014;
+        public static final int loadbtn=0x7f09001d;
+        public static final int mov1_spinner=0x7f090009;
+        public static final int mov2_spinner=0x7f09000a;
+        public static final int mov3_spinner=0x7f09000b;
+        public static final int mov4_spinner=0x7f09000c;
+        public static final int mov5_spinner=0x7f09000d;
+        public static final int namebtn=0x7f090018;
+        public static final int photo=0x7f090010;
+        public static final int rateprompt=0x7f090008;
+        public static final int relativelayout01=0x7f09001f;
+        public static final int show=0x7f090017;
+        public static final int storebtn=0x7f09001b;
+        public static final int storeindatabase=0x7f09000f;
+        public static final int viewbtn=0x7f090019;
+        public static final int viewdatabasebtn=0x7f09001a;
     }
     public static final class layout {
         public static final int activity_all_file=0x7f030000;
@@ -86,19 +93,19 @@ public final class R {
         public static final int Done=0x7f06000c;
         public static final int EnterNames=0x7f060002;
         public static final int Exit=0x7f060006;
-        public static final int Filter=0x7f060018;
+        public static final int Filter=0x7f06001a;
         public static final int Load=0x7f060005;
-        public static final int Show=0x7f06001e;
+        public static final int Show=0x7f060020;
         public static final int Store=0x7f060004;
         public static final int View=0x7f060003;
-        public static final int Viewdatabase=0x7f060016;
+        public static final int Viewdatabase=0x7f060018;
         public static final int action_settings=0x7f060001;
-        public static final int age_from=0x7f06001c;
-        public static final int age_to=0x7f06001d;
+        public static final int age_from=0x7f06001e;
+        public static final int age_to=0x7f06001f;
         public static final int app_name=0x7f060000;
-        public static final int filter_prompt1=0x7f060019;
-        public static final int filter_prompt2=0x7f06001a;
-        public static final int filter_prompt3=0x7f06001b;
+        public static final int filter_prompt1=0x7f06001b;
+        public static final int filter_prompt2=0x7f06001c;
+        public static final int filter_prompt3=0x7f06001d;
         public static final int finish=0x7f06000f;
         public static final int food_prompt=0x7f060010;
         public static final int hello_world=0x7f060008;
@@ -106,18 +113,20 @@ public final class R {
         public static final int hint_filename=0x7f06000e;
         public static final int hint_fname=0x7f060009;
         public static final int hint_lname=0x7f06000a;
-        public static final int photo=0x7f060020;
-        public static final int profileimg=0x7f060021;
-        public static final int storeindatabase=0x7f060014;
-        public static final int title_activity_all_file=0x7f060013;
-        public static final int title_activity_database=0x7f060015;
+        public static final int movie_prompt=0x7f060012;
+        public static final int photo=0x7f060022;
+        public static final int profileimg=0x7f060023;
+        public static final int rate_prompt=0x7f060011;
+        public static final int storeindatabase=0x7f060016;
+        public static final int title_activity_all_file=0x7f060015;
+        public static final int title_activity_database=0x7f060017;
         public static final int title_activity_enter_filename=0x7f06000d;
         public static final int title_activity_enter_name=0x7f060007;
-        public static final int title_activity_filter=0x7f060017;
-        public static final int title_activity_load=0x7f060011;
-        public static final int title_activity_show_filter=0x7f06001f;
-        public static final int title_activity_show_picture=0x7f060022;
-        public static final int title_activity_showfile=0x7f060012;
+        public static final int title_activity_filter=0x7f060019;
+        public static final int title_activity_load=0x7f060013;
+        public static final int title_activity_show_filter=0x7f060021;
+        public static final int title_activity_show_picture=0x7f060024;
+        public static final int title_activity_showfile=0x7f060014;
     }
     public static final class style {
         /** 

@@ -27,6 +27,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     private static final String KEY_AGE = "age";
     private static final String KEY_FOOD = "food";
     private static final String KEY_PICURL = "picurl";
+    private static final String KEY_MOV1 = "mov1rate";
+    private static final String KEY_MOV2 = "mov2rate";
+    private static final String KEY_MOV3 = "mov3rate";
+    private static final String KEY_MOV4 = "mov4rate";
+    private static final String KEY_MOV5 = "mov5rate";
     
  
     public DatabaseHandler(Context context) {
@@ -38,7 +43,9 @@ public class DatabaseHandler extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         String CREATE_CONTACTS_TABLE = "CREATE TABLE " + TABLE_CONTACTS + "("
                 + KEY_ID + " INTEGER PRIMARY KEY," + KEY_NAME + " TEXT,"
-                + KEY_AGE + " INTEGER," + KEY_FOOD + " TEXT," + KEY_PICURL + " TEXT" + ")";
+                + KEY_AGE + " INTEGER," + KEY_FOOD + " TEXT," + KEY_PICURL + " TEXT,"
+                + KEY_MOV1 + " INTEGER," + KEY_MOV2 + " INTEGER," + KEY_MOV3 + " INTEGER,"
+                + KEY_MOV4 + " INTEGER," + KEY_MOV5 + " INTEGER" + ")";
         db.execSQL(CREATE_CONTACTS_TABLE);
     }
  
@@ -65,6 +72,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_AGE, contact.getAge()); // Contact Age
         values.put(KEY_FOOD, contact.getFood()); // Contact Food
         values.put(KEY_PICURL, contact.getPicurl()); // Contact Picurl
+        values.put(KEY_MOV1, contact.getMov1rate()); // Contact Mov1rate
+        values.put(KEY_MOV2, contact.getMov2rate()); // Contact Mov2rate
+        values.put(KEY_MOV3, contact.getMov3rate()); // Contact Mov3rate
+        values.put(KEY_MOV4, contact.getMov4rate()); // Contact Mov4rate
+        values.put(KEY_MOV5, contact.getMov5rate()); // Contact Mov5rate
  
         // Inserting Row
         db.insert(TABLE_CONTACTS, null, values);
@@ -82,7 +94,8 @@ public class DatabaseHandler extends SQLiteOpenHelper {
             cursor.moveToFirst();
  
         Contact contact = new Contact(Integer.parseInt(cursor.getString(0)),
-                cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4));
+                cursor.getString(1), cursor.getString(2), cursor.getString(3), cursor.getString(4),
+                cursor.getInt(5), cursor.getInt(6), cursor.getInt(7), cursor.getInt(8), cursor.getInt(9));
         // return contact
         return contact;
     }
@@ -105,6 +118,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 contact.setAge(cursor.getString(2));
                 contact.setFood(cursor.getString(3));
                 contact.setPicurl(cursor.getString(4));
+                contact.setMov1rate(cursor.getInt(5));
+                contact.setMov2rate(cursor.getInt(6));
+                contact.setMov3rate(cursor.getInt(7));
+                contact.setMov4rate(cursor.getInt(8));
+                contact.setMov5rate(cursor.getInt(9));
                 // Adding contact to list
                 contactList.add(contact);
             } while (cursor.moveToNext());
@@ -123,6 +141,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
         values.put(KEY_AGE, contact.getAge());
         values.put(KEY_FOOD, contact.getFood());
         values.put(KEY_PICURL, contact.getPicurl());
+        values.put(KEY_MOV1, contact.getMov1rate());
+        values.put(KEY_MOV2, contact.getMov2rate());
+        values.put(KEY_MOV3, contact.getMov3rate());
+        values.put(KEY_MOV4, contact.getMov4rate());
+        values.put(KEY_MOV5, contact.getMov5rate());
  
         // updating row
         return db.update(TABLE_CONTACTS, values, KEY_ID + " = ?",
@@ -168,6 +191,11 @@ public class DatabaseHandler extends SQLiteOpenHelper {
                 contact.setAge(cursor.getString(2));
                 contact.setFood(cursor.getString(3));
                 contact.setPicurl(cursor.getString(4));
+                contact.setMov1rate(cursor.getInt(5));
+                contact.setMov2rate(cursor.getInt(6));
+                contact.setMov3rate(cursor.getInt(7));
+                contact.setMov4rate(cursor.getInt(8));
+                contact.setMov5rate(cursor.getInt(9));
                 // Adding contact to list
                 contactList.add(contact);
             } while (cursor.moveToNext());

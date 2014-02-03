@@ -5,8 +5,6 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import com.example.ecea2.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,18 +19,53 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.ecea2.R;
+
 public class EnterNameActivity extends Activity {
 	public String picurl = null;
+	public int[] rates=new int[]{1,2,3,4,5};
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_enter_name);
-		Spinner s = (Spinner)findViewById(R.id.f_spinner);
-		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(
+		Spinner food_s = (Spinner)findViewById(R.id.f_spinner);
+		ArrayAdapter<CharSequence> adapter_food = ArrayAdapter.createFromResource(
 				this, R.array.food_spinner, android.R.layout.simple_spinner_dropdown_item);
-		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		s.setAdapter(adapter);
+		adapter_food.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		food_s.setAdapter(adapter_food);
+		
+
+		Spinner mov1_s = (Spinner)findViewById(R.id.mov1_spinner);
+		ArrayAdapter<CharSequence> adapter_mov1 = ArrayAdapter.createFromResource(
+				this, R.array.rate_spinner, android.R.layout.simple_spinner_dropdown_item);
+		adapter_mov1.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mov1_s.setAdapter(adapter_mov1);
+		
+		Spinner mov2_s = (Spinner)findViewById(R.id.mov2_spinner);
+		ArrayAdapter<CharSequence> adapter_mov2 = ArrayAdapter.createFromResource(
+				this, R.array.rate_spinner, android.R.layout.simple_spinner_dropdown_item);
+		adapter_mov2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mov2_s.setAdapter(adapter_mov2);
+		
+		Spinner mov3_s = (Spinner)findViewById(R.id.mov3_spinner);
+		ArrayAdapter<CharSequence> adapter_mov3 = ArrayAdapter.createFromResource(
+				this, R.array.rate_spinner, android.R.layout.simple_spinner_dropdown_item);
+		adapter_mov3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mov3_s.setAdapter(adapter_mov3);
+		
+		Spinner mov4_s = (Spinner)findViewById(R.id.mov4_spinner);
+		ArrayAdapter<CharSequence> adapter_mov4 = ArrayAdapter.createFromResource(
+				this, R.array.rate_spinner, android.R.layout.simple_spinner_dropdown_item);
+		adapter_mov4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mov4_s.setAdapter(adapter_mov4);
+		
+		Spinner mov5_s = (Spinner)findViewById(R.id.mov5_spinner);
+		ArrayAdapter<CharSequence> adapter_mov5 = ArrayAdapter.createFromResource(
+				this, R.array.rate_spinner, android.R.layout.simple_spinner_dropdown_item);
+		adapter_mov5.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		mov5_s.setAdapter(adapter_mov5);
+		
 	}
 
 	@Override
@@ -51,14 +84,29 @@ public class EnterNameActivity extends Activity {
 		EditText editText2 = (EditText) findViewById(R.id.editlname);
 		String lastname = editText2.getText().toString();
 		EditText editText3 = (EditText) findViewById(R.id.editage);
-		Spinner myspinner = (Spinner) findViewById(R.id.f_spinner);
-		String ffood = myspinner.getSelectedItem().toString();
+		Spinner fspinner = (Spinner) findViewById(R.id.f_spinner);
+		String ffood = fspinner.getSelectedItem().toString();
+		Spinner mov1spinner = (Spinner) findViewById(R.id.mov1_spinner);
+		String mov1rate = mov1spinner.getSelectedItem().toString();
+		Spinner mov2spinner = (Spinner) findViewById(R.id.mov2_spinner);
+		String mov2rate = mov2spinner.getSelectedItem().toString();
+		Spinner mov3spinner = (Spinner) findViewById(R.id.mov3_spinner);
+		String mov3rate = mov3spinner.getSelectedItem().toString();
+		Spinner mov4spinner = (Spinner) findViewById(R.id.mov4_spinner);
+		String mov4rate = mov4spinner.getSelectedItem().toString();
+		Spinner mov5spinner = (Spinner) findViewById(R.id.mov5_spinner);
+		String mov5rate = mov5spinner.getSelectedItem().toString();
 		String age = editText3.getText().toString();
 		extras.putString("EXTRA_FIRSTNAME",firstname);
 		extras.putString("EXTRA_LASTNAME",lastname);
 		extras.putString("EXTRA_AGE",age);
 		extras.putString("EXTRA_FFOOD",ffood);
 		extras.putString("EXTRA_PICURL", picurl);
+		extras.putString("EXTRA_MOV1RATE", mov1rate);
+		extras.putString("EXTRA_MOV2RATE", mov2rate);
+		extras.putString("EXTRA_MOV3RATE", mov3rate);
+		extras.putString("EXTRA_MOV4RATE", mov4rate);
+		extras.putString("EXTRA_MOV5RATE", mov5rate);
 		intent.putExtras(extras);
 		startActivity(intent);	
 	}
@@ -73,9 +121,19 @@ public class EnterNameActivity extends Activity {
 	  EditText editText3 = (EditText) findViewById(R.id.editage);
 	  Spinner myspinner = (Spinner) findViewById(R.id.f_spinner);
 	  String ffood = myspinner.getSelectedItem().toString();
+	  Spinner mov1spinner = (Spinner) findViewById(R.id.mov1_spinner);
+	  int mov1rate = Integer.parseInt(mov1spinner.getSelectedItem().toString());
+	  Spinner mov2spinner = (Spinner) findViewById(R.id.mov2_spinner);
+	  int mov2rate = Integer.parseInt(mov2spinner.getSelectedItem().toString());
+	  Spinner mov3spinner = (Spinner) findViewById(R.id.mov3_spinner);
+	  int mov3rate = Integer.parseInt(mov3spinner.getSelectedItem().toString());
+	  Spinner mov4spinner = (Spinner) findViewById(R.id.mov4_spinner);
+	  int mov4rate = Integer.parseInt(mov4spinner.getSelectedItem().toString());
+	  Spinner mov5spinner = (Spinner) findViewById(R.id.mov5_spinner);
+	  int mov5rate = Integer.parseInt(mov5spinner.getSelectedItem().toString());
 	  String age = editText3.getText().toString();
-	  Log.d("stringtag", picurl);
-	  db.addContact(new Contact(firstname+" "+lastname, age, ffood, picurl));
+	  //Log.d("stringtag", picurl);
+	  db.addContact(new Contact(firstname+" "+lastname, age, ffood, picurl, 1, 2, 3, 4, 5));
 	  
 
 	}
