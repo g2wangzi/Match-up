@@ -35,6 +35,11 @@ public class EnterNameActivity extends Activity {
 		adapter_food.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		food_s.setAdapter(adapter_food);
 		
+		/*  esay way to add spinner 
+		Integer[] items = new Integer[]{1,2,3,4};
+		ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer>(this,android.R.layout.simple_spinner_item, items);
+		food_s.setAdapter(adapter);
+		*/
 
 		Spinner mov1_s = (Spinner)findViewById(R.id.mov1_spinner);
 		ArrayAdapter<CharSequence> adapter_mov1 = ArrayAdapter.createFromResource(
