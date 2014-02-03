@@ -122,18 +122,18 @@ public class EnterNameActivity extends Activity {
 	  Spinner myspinner = (Spinner) findViewById(R.id.f_spinner);
 	  String ffood = myspinner.getSelectedItem().toString();
 	  Spinner mov1spinner = (Spinner) findViewById(R.id.mov1_spinner);
-	  int mov1rate = Integer.parseInt(mov1spinner.getSelectedItem().toString());
+	  Integer mov1rate = Integer.parseInt(mov1spinner.getSelectedItem().toString());
 	  Spinner mov2spinner = (Spinner) findViewById(R.id.mov2_spinner);
-	  int mov2rate = Integer.parseInt(mov2spinner.getSelectedItem().toString());
+	  Integer mov2rate = Integer.parseInt(mov2spinner.getSelectedItem().toString());
 	  Spinner mov3spinner = (Spinner) findViewById(R.id.mov3_spinner);
-	  int mov3rate = Integer.parseInt(mov3spinner.getSelectedItem().toString());
+	  Integer mov3rate = Integer.parseInt(mov3spinner.getSelectedItem().toString());
 	  Spinner mov4spinner = (Spinner) findViewById(R.id.mov4_spinner);
-	  int mov4rate = Integer.parseInt(mov4spinner.getSelectedItem().toString());
+	  Integer mov4rate = Integer.parseInt(mov4spinner.getSelectedItem().toString());
 	  Spinner mov5spinner = (Spinner) findViewById(R.id.mov5_spinner);
-	  int mov5rate = Integer.parseInt(mov5spinner.getSelectedItem().toString());
+	  Integer mov5rate = Integer.parseInt(mov5spinner.getSelectedItem().toString());
 	  String age = editText3.getText().toString();
 	  //Log.d("stringtag", picurl);
-	  db.addContact(new Contact(firstname+" "+lastname, age, ffood, picurl, 1, 2, 3, 4, 5));
+	  db.addContact(new Contact(firstname+" "+lastname, age, ffood, picurl, mov1rate, mov2rate, mov3rate, mov4rate, mov5rate));
 	  
 
 	}
